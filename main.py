@@ -1,3 +1,7 @@
+import os
+os.system("pip install python-dotenv")
+from dotenv import load_dotenv
+
 import streamlit as st
 from few_shot import FewShotPosts
 from post_generator import generate_post
