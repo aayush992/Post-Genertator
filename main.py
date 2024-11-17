@@ -1,10 +1,14 @@
 import os
 
-# Ensure the package is installed globally
-os.system("pip install python-dotenv --target=/home/adminuser/venv/lib/python3.12/site-packages")
+os.system("pip install python-dotenv --target=/tmp/packages")
 
-# Import after installation
+# Add the directory to sys.path
+import sys
+sys.path.append("/tmp/packages")
+
+# Import the module
 from dotenv import load_dotenv
+
 
 import streamlit as st
 from few_shot import FewShotPosts
