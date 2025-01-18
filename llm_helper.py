@@ -8,7 +8,7 @@ load_dotenv()
 
 llm = ChatGroq(
     groq_api_key=os.getenv("GROQ_API_KEY"), 
-    model_name="llama-3.2-90b-text-preview"  
+    model_name="llama3-8b-8192"  
 )
 
 if __name__ == "__main__":
